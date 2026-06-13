@@ -1,45 +1,78 @@
 export const siteConfig = {
   name: "Nadine Arindy Octavia",
-  title: "Software Engineer & Tech Enthusiast",
+  title: "IT Student & Creative Developer",
+  tagline: "I'm Nadine. An IT student & creative developer passionate about making technology-driven solutions with real-world impact.",
+  email: "nadineoctavia2110@gmail.com",
+  phone: "(+62)82274141390",
   githubUsername: "nadineoct",
-  email: "nadine@example.com", // Replace with your email
   socials: {
     github: "https://github.com/nadineoct",
-    linkedin: "https://linkedin.com/in/nadineoct", // Replace with your LinkedIn
-    twitter: "https://twitter.com/nadineoct", // Replace with your Twitter
+    linkedin: "https://linkedin.com/in/nadineoct", // Replace with actual if known
+    instagram: "https://instagram.com/nadineoct", // Replace with actual if known
+    youtube: "https://youtube.com/@nadineoct", // Replace with actual if known
   },
-  bio: "Passionate software engineer focused on building clean, efficient, and user-friendly applications. Currently exploring the intersections of AI, Web Development, and Human-Computer Interaction.",
-  experience: [
+  stats: {
+    instagram: "9,800+",
+    youtube: "600+",
+  },
+  bio: "Second-year Information Systems and Technology student at Institut Teknologi Bandung. I specialize in backend development and am deeply interested in how AI can be integrated into everyday tools. I bridge the gap between technical efficiency and creative expression.",
+  creativeBio: "Also an active musician and digital creator with a growing online audience...",
+  education: [
     {
-      company: "Tech Solutions Inc.",
-      role: "Software Engineering Intern",
-      period: "2024 - Present",
-      description: "Developed and maintained web applications using React and Node.js. Optimized database queries for improved performance.",
+      school: "Institut Teknologi Bandung (ITB)",
+      degree: "Bachelor of Information Systems and Technology",
+      period: "2023 - Present",
+      achievements: ["Dean's List", "Fully Funded Scholar for NUS Winter Program"],
     },
     {
-      company: "Open Source Community",
-      role: "Contributor",
-      period: "2023 - 2024",
-      description: "Contributed to various open-source projects, focusing on UI components and documentation.",
+      school: "Universitas Bina Nusantara",
+      degree: "High School Diploma",
+      period: "2020 - 2023",
+      achievements: ["Graduated with High Distinction"],
     },
   ],
-  projects: [
+  experience: [
     {
-      name: "Personal Portfolio",
-      description: "A minimalist, customizable portfolio website built with Next.js and TailwindCSS.",
-      link: "https://github.com/nadineoct/personal-site-nadine",
-      tech: ["Next.js", "TailwindCSS", "TypeScript"],
+      company: "Wagify Solutions LLP",
+      role: "Backend Developer Intern",
+      period: "Mar 2026 - Apr 2026",
+      location: "Remote",
+      points: [
+        "Developed scalable APIs using Node.js and Express.",
+        "Integrated third-party AI services for automated content moderation.",
+        "Optimized database schemas in PostgreSQL for faster read/write operations.",
+      ],
     },
     {
-      name: "Task Management App",
-      description: "A simple and intuitive task management application with real-time updates.",
-      link: "#",
-      tech: ["React", "Firebase"],
+      company: "Pipeline Talent Programme at JC",
+      role: "Participant / Talent",
+      period: "Sep 2025 - Present",
+      location: "Hybrid",
+      points: [
+        "Engaged in intensive software engineering workshops and leadership training.",
+        "Collaborated with cross-functional teams to build prototype solutions for industry problems.",
+      ],
+    },
+    {
+      company: "Dealls",
+      role: "Brand Ambassador & Group Leader",
+      period: "Aug 2024 - Sep 2024",
+      location: "Hybrid",
+      points: [
+        "Led a team of campus ambassadors to increase user acquisition by 20%.",
+        "Coordinated marketing events and networking sessions for students.",
+      ],
     },
   ],
   skills: {
-    languages: ["TypeScript", "JavaScript", "Python", "Java", "SQL"],
-    frameworks: ["React", "Next.js", "Node.js", "TailwindCSS"],
-    tools: ["Git", "Docker", "VS Code", "Figma"],
+    hard: ["Python", "C", "Java", "TypeScript", "Next.js", "PostgreSQL", "Git"],
+    language: ["Indonesian (Native)", "English (Professional)", "German (Basic)"],
+    soft: ["Analytical Thinking", "Leadership", "Public Speaking", "Problem Solving"],
   },
+  creative: [
+    { name: "ITB Jazz Vocal Mentor", link: "#" },
+    { name: "Aku Masuk ITB Jingle Composer", link: "#" },
+    { name: "Selected Awardee Singapore/Malaysia Program", link: "#" },
+  ],
+  funFact: "Nadine designs APIs and composes music faster than replying to a text message :)",
 };

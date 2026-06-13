@@ -1,39 +1,34 @@
+"use client";
+
 import Link from "next/link";
-import { ThemeToggle } from "./theme-toggle";
+import { siteConfig } from "@/data/config";
+import { motion } from "framer-motion";
 
 export function Navbar() {
   return (
-    <nav className="sticky top-0 z-40 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-16 items-center justify-between">
-        <div className="flex gap-6 md:gap-10">
-          <Link href="/" className="flex items-center space-x-2">
-            <span className="inline-block font-bold">Portfolio</span>
-          </Link>
-          <div className="hidden md:flex gap-6">
-            <Link
-              href="#experience"
-              className="flex items-center text-sm font-medium text-muted-foreground hover:text-primary"
-            >
-              Experience
-            </Link>
-            <Link
-              href="#projects"
-              className="flex items-center text-sm font-medium text-muted-foreground hover:text-primary"
-            >
-              Projects
-            </Link>
-            <Link
-              href="#skills"
-              className="flex items-center text-sm font-medium text-muted-foreground hover:text-primary"
-            >
-              Skills
-            </Link>
+    <motion.nav 
+      initial={{ y: -100 }}
+      animate={{ y: 0 }}
+      className="fixed top-0 z-50 w-full glass h-16"
+    >
+      <div className="container max-w-5xl mx-auto px-6 h-full flex items-center justify-between">
+        <Link href="/" className="text-lg font-bold tracking-tight">
+          {siteConfig.name}
+        </Link>
+        <div className="flex items-center gap-8">
+          <div className="hidden md:flex gap-8">
+            {["Home", "About", "Education", "Experience", "Creative", "Contact"].map((item) => (
+              <Link
+                key={item}
+                href={`#${item.toLowerCase()}`}
+                className="text-[15px] font-medium text-muted hover:text-foreground transition-colors"
+              >
+                {item}
+              </Link>
+            ))}
           </div>
         </div>
-        <div className="flex items-center space-x-4">
-          <ThemeToggle />
-        </div>
       </div>
-    </nav>
+    </motion.nav>
   );
 }
