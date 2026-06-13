@@ -5,26 +5,31 @@ import { motion } from "framer-motion";
 
 export function About() {
   return (
-    <section id="about" className="py-24 border-t border-border">
-      <div className="flex flex-col md:flex-row gap-16 items-center">
-        <div className="md:w-1/2">
-          <h2 className="text-4xl font-black mb-8 tracking-tight">About Me</h2>
-          <p className="text-xl leading-relaxed text-muted font-medium">
+    <section id="about" className="py-32 border-t border-border">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-24 items-center">
+        <div>
+          <h2 className="text-6xl md:text-8xl font-black uppercase mb-12">01 / IDENTITY</h2>
+          <p className="text-xl md:text-2xl leading-relaxed text-muted font-medium mb-8">
             {siteConfig.bio}
           </p>
+          <div className="p-6 bg-foreground text-white rounded-2xl">
+            <p className="text-lg font-black italic">
+              "Active musician and digital creator with a growing online audience (9,800+ Instagram; 600+ YouTube)."
+            </p>
+          </div>
         </div>
         
-        <div className="md:w-1/2 flex justify-center">
+        <div className="flex justify-center">
           <motion.div 
-            whileHover={{ rotate: 0, scale: 1.05 }}
-            className="relative bg-white p-4 pb-12 shadow-2xl rounded-sm -rotate-3 border border-border"
+            whileHover={{ rotate: 0, scale: 1.02 }}
+            className="polaroid-frame -rotate-3 transition-transform duration-500"
           >
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-8 bg-white/40 backdrop-blur-sm border border-white/20 rotate-12 pointer-events-none" />
-            <div className="w-64 h-64 bg-apple-blue/10 rounded-sm overflow-hidden flex items-center justify-center text-apple-blue/20">
-              <span className="text-xs uppercase font-bold tracking-widest">Photo Placeholder</span>
+            <div className="tape-graphic" />
+            <div className="w-[300px] h-[300px] bg-gray-100 flex items-center justify-center text-gray-300 font-bold uppercase text-[10px] tracking-widest">
+              Primary Profile Photo
             </div>
-            <div className="mt-6 font-medium text-center italic text-muted">
-              {siteConfig.creativeBio}
+            <div className="mt-8 text-center text-2xl font-black tracking-tight text-gray-400">
+              Nadine Arindy O.
             </div>
           </motion.div>
         </div>
