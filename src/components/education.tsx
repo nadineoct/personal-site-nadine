@@ -30,24 +30,24 @@ export function Education() {
 
               {/* Period */}
               <div className="mb-3">
-                <span className="text-xs md:text-sm font-bold uppercase tracking-[0.15em] text-zinc-500">
+                <span className="text-xs md:text-sm font-bold uppercase tracking-[0.15em] text-[#444444]">
                   {edu.period}
                 </span>
 
                 {edu.current && (
-                  <span className="ml-3 px-3 py-1 rounded-md bg-zinc-800 text-[10px] font-bold uppercase tracking-wider">
+                  <span className="ml-3 px-3 py-1 rounded-full bg-[#111111] text-white text-[10px] font-bold uppercase tracking-wider">
                     Current
                   </span>
                 )}
               </div>
 
               {/* School */}
-              <h3 className="text-2xl md:text-4xl font-bold mb-3">
+              <h3 className="text-2xl md:text-4xl font-bold mb-3 text-[#111111]">
                 {edu.school}
               </h3>
 
               {/* Degree */}
-              <p className="text-lg text-zinc-400">
+              <p className="text-lg text-[#444444]">
                 {edu.degree}
               </p>
 
