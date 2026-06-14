@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 const achievements = [
   {
@@ -75,61 +76,68 @@ export function AchievementsHub() {
   );
 
   return (
-    <section id="achievements" className="py-24 border-t border-border">
-      <h2 className="text-4xl md:text-5xl font-bold mb-16">
-        Achievements Hub
-      </h2>
+    <section id="achievements" className="py-12">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: true }}
+      >
+        <h2 className="text-4xl md:text-5xl font-bold mb-16">
+          Achievements Hub
+        </h2>
 
-      <div className="flex justify-center mb-12">
-        <div className="flex gap-1 p-1 bg-gray-100 rounded-full w-fit">
-          {[
-            { id: "all", label: "All Achievements" },
-            { id: "comp", label: "Competitions & Awards" },
-            { id: "global", label: "Global & Recognitions" },
-          ].map((tab) => (
-            <button
-              key={tab.id}
-              onClick={() => setActiveTab(tab.id)}
-              className={`px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 ${
-                activeTab === tab.id
-                  ? "bg-[#111111] text-white shadow-md"
-                  : "text-[#6B7280] hover:text-[#111111] bg-transparent"
-              }`}
+        <div className="flex justify-center mb-12">
+          <div className="flex gap-1 p-1 bg-gray-100 rounded-full w-fit">
+            {[
+              { id: "all", label: "All Achievements" },
+              { id: "comp", label: "Competitions & Awards" },
+              { id: "global", label: "Global & Recognitions" },
+            ].map((tab) => (
+              <button
+                key={tab.id}
+                onClick={() => setActiveTab(tab.id)}
+                className={`px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 ${
+                  activeTab === tab.id
+                    ? "bg-[#111111] text-white shadow-md"
+                    : "text-[#6B7280] hover:text-[#111111] bg-transparent"
+                }`}
+              >
+                {tab.label}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {filtered.map((item, i) => (
+            <div
+              key={i}
+              className="apple-card flex flex-col gap-6 overflow-hidden"
             >
-              {tab.label}
-            </button>
+              <div className="h-48 rounded-2xl overflow-hidden bg-gray-100">
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+
+              <div>
+                <h4 className="text-xl font-black leading-tight mb-2">
+                  {item.title}
+                </h4>
+
+                {item.desc && (
+                  <p className="text-sm text-black font-medium">
+                    {item.desc}
+                  </p>
+                )}
+              </div>
+            </div>
           ))}
         </div>
-      </div>
-
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {filtered.map((item, i) => (
-          <div
-            key={i}
-            className="apple-card flex flex-col gap-6 overflow-hidden"
-          >
-            <div className="h-48 rounded-2xl overflow-hidden bg-gray-100">
-              <img
-                src={item.image}
-                alt={item.title}
-                className="w-full h-full object-cover"
-              />
-            </div>
-
-            <div>
-              <h4 className="text-xl font-black leading-tight mb-2">
-                {item.title}
-              </h4>
-
-              {item.desc && (
-                <p className="text-sm text-muted font-medium">
-                  {item.desc}
-                </p>
-              )}
-            </div>
-          </div>
-        ))}
-      </div>
+      </motion.div>
     </section>
   );
 }

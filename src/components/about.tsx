@@ -6,7 +6,7 @@ import Ferrofluid from "./Ferrofluid";
 
 export function About() {
   return (
-    <section id="about" className="py-24 border-t border-border">
+    <section id="about" className="py-12 border-t border-border">
       <h2 className="text-4xl md:text-5xl font-bold mb-16">
         About Me
       </h2>
