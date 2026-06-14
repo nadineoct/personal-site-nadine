@@ -35,9 +35,6 @@ export function About() {
           transition={{ duration: 0.7 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-6xl md:text-8xl font-black uppercase mb-12">
-            01 / IDENTITY
-          </h2>
 
           <p className="text-xl md:text-2xl leading-relaxed text-black font-medium mb-8">
             {siteConfig.bio}
