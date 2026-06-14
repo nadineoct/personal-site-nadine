@@ -39,12 +39,12 @@ export function About() {
             01 / IDENTITY
           </h2>
 
-          <p className="text-xl md:text-2xl leading-relaxed text-muted font-medium mb-8">
+          <p className="text-xl md:text-2xl leading-relaxed text-black font-medium mb-8">
             {siteConfig.bio}
           </p>
 
           <div className="rounded-3xl border border-white/10 bg-white/5 backdrop-blur-sm p-8">
-            <p className="text-lg md:text-xl font-bold italic leading-relaxed">
+            <p className="text-lg md:text-xl font-bold italic leading-relaxed text-black">
               "Active musician and digital creator with a growing online
               audience (9,800+ Instagram · 600+ YouTube). Passionate about
               technology, sustainability, and building meaningful digital
