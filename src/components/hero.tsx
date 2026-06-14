@@ -11,7 +11,9 @@ export function Hero() {
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-[120px] md:text-[180px] font-black leading-[0.8] tracking-tighter bg-gradient-to-r from-apple-blue to-apple-purple bg-clip-text text-transparent mb-12"
+            // className="text-[120px] md:text-[180px] font-black leading-[0.8] tracking-tighter bg-gradient-to-r from-apple-blue to-apple-purple bg-clip-text text-transparent mb-12"
+            className="text-[120px] md:text-[180px] font-black leading-[0.8] tracking-tighter text-black mb-12"
+            //className="text-[120px] md:text-[180px] font-black leading-[0.8] tracking-tighter bg-gradient-to-r from-pink-500 to-orange-400 bg-clip-text text-transparent mb-12"
           >
             hello!
           </motion.h1>
