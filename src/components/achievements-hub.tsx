@@ -80,24 +80,26 @@ export function AchievementsHub() {
         Achievements Hub
       </h2>
 
-      <div className="flex gap-2 p-1 bg-gray-100 rounded-lg overflow-x-auto whitespace-nowrap mb-8">
-        {[
-          { id: "all", label: "All Achievements" },
-          { id: "comp", label: "Competitions & Awards" },
-          { id: "global", label: "Global & Recognitions" },
-        ].map((tab) => (
-          <button
-            key={tab.id}
-            onClick={() => setActiveTab(tab.id)}
-            className={`px-6 py-2 rounded-md text-sm font-bold transition-all ${
-              activeTab === tab.id
-                ? "bg-white shadow-sm text-foreground"
-                : "text-muted hover:text-foreground"
-            }`}
-          >
-            {tab.label}
-          </button>
-        ))}
+      <div className="flex justify-center mb-12">
+        <div className="flex gap-1 p-1 bg-gray-100 rounded-full w-fit">
+          {[
+            { id: "all", label: "All Achievements" },
+            { id: "comp", label: "Competitions & Awards" },
+            { id: "global", label: "Global & Recognitions" },
+          ].map((tab) => (
+            <button
+              key={tab.id}
+              onClick={() => setActiveTab(tab.id)}
+              className={`px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 ${
+                activeTab === tab.id
+                  ? "bg-[#111111] text-white shadow-md"
+                  : "text-[#6B7280] hover:text-[#111111] bg-transparent"
+              }`}
+            >
+              {tab.label}
+            </button>
+          ))}
+        </div>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
