@@ -63,7 +63,7 @@ const achievements = [
     title: "Fully Funded Awardee - PCAE Scholarship to Singapore & Malaysia (2025)",
     desc: "Selected as 1 of 2 awardees.",
     category: "global",
-    image: "/personal-site-nadine/images/achievements/pcae.jpg",
+    image: "/personal-site-nadine/images/achievements/pcae.jpeg",
   },
 ];
 
