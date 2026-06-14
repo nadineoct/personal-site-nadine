@@ -1,34 +1,63 @@
 "use client";
 
 import { siteConfig } from "@/data/config";
-import { motion } from "framer-motion";
 
 export function Education() {
   return (
-    <section id="education" className="py-32 border-t border-border">
-      <h2 className="text-6xl md:text-8xl font-black uppercase mb-20">02 / ACADEMIA</h2>
-      <div className="flex flex-col gap-16">
-        {siteConfig.education.map((edu, index) => (
-          <div key={index} className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div className={index % 2 === 0 ? "order-1" : "order-1 md:order-2"}>
-              <span className="text-sm font-black text-apple-blue uppercase tracking-[0.2em] mb-4 block">{edu.period}</span>
-              <h3 className="text-4xl font-black mb-4 leading-none uppercase">{edu.school}</h3>
-              <p className="text-xl font-bold text-muted mb-6">{edu.degree}</p>
-              <div className="flex flex-wrap gap-2">
-                {edu.achievements.map((a, i) => (
-                  <span key={i} className="px-4 py-1.5 bg-gray-100 text-[10px] font-black uppercase tracking-widest rounded-full">
-                    {a}
+    <section id="education" className="py-24 border-t border-border">
+      <h2 className="text-4xl md:text-5xl font-bold mb-16">
+        Education
+      </h2>
+
+      <div className="relative">
+        {/* Vertical Timeline Line */}
+        <div className="absolute left-[13px] top-0 bottom-0 w-[2px] bg-zinc-700" />
+
+        <div className="space-y-0">
+          {siteConfig.education.map((edu, index) => (
+            <div
+              key={index}
+              className="relative pl-16 pb-14"
+            >
+              {/* Timeline Dot */}
+              <div
+                className={`absolute left-0 top-1 w-7 h-7 rounded-full border-2 flex items-center justify-center ${
+                  edu.current
+                    ? "bg-white border-white"
+                    : "bg-background border-zinc-500"
+                }`}
+              />
+
+              {/* Period */}
+              <div className="mb-3">
+                <span className="text-xs md:text-sm font-bold uppercase tracking-[0.15em] text-zinc-500">
+                  {edu.period}
+                </span>
+
+                {edu.current && (
+                  <span className="ml-3 px-3 py-1 rounded-md bg-zinc-800 text-[10px] font-bold uppercase tracking-wider">
+                    Current
                   </span>
-                ))}
+                )}
               </div>
+
+              {/* School */}
+              <h3 className="text-2xl md:text-4xl font-bold mb-3">
+                {edu.school}
+              </h3>
+
+              {/* Degree */}
+              <p className="text-lg text-zinc-400">
+                {edu.degree}
+              </p>
+
+              {/* Divider */}
+              {index !== siteConfig.education.length - 1 && (
+                <div className="mt-10 border-b border-zinc-800" />
+              )}
             </div>
-            <div className={index % 2 === 0 ? "order-2" : "order-2 md:order-1"}>
-              <div className="media-slot h-[300px]">
-                [ CAMPUS/EDUCATION PHOTO ]
-              </div>
-            </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );

@@ -18,19 +18,19 @@ export const siteConfig = {
   bio: "Second-year Information Systems and Technology student at Institut Teknologi Bandung. I specialize in backend development and am deeply interested in how AI can be integrated into everyday tools. I bridge the gap between technical efficiency and creative expression.",
   creativeBio: "Also an active musician and digital creator with a growing online audience...",
   education: [
-    {
-      school: "Institut Teknologi Bandung (ITB)",
-      degree: "Bachelor of Information Systems and Technology",
-      period: "2023 - Present",
-      achievements: ["Dean's List", "Fully Funded Scholar for NUS Winter Program"],
-    },
-    {
-      school: "Universitas Bina Nusantara",
-      degree: "High School Diploma",
-      period: "2020 - 2023",
-      achievements: ["Graduated with High Distinction"],
-    },
-  ],
+  {
+    period: "AUG 2024 — PRESENT",
+    school: "Bandung Institute of Technology",
+    degree: "Bachelor of Information Systems and Technology • GPA 4.00/4.00",
+    current: true,
+  },
+  {
+    period: "MAY 2024",
+    school: "Universitas Bina Nusantara",
+    degree: "Fundamentals of Programming with Python • High Distinction",
+    current: false,
+  },
+],
   experience: [
     {
       company: "Wagify Solutions LLP",
