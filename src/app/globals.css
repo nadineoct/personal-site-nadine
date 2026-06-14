@@ -212,3 +212,17 @@
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
 }
+.prism-bg {
+  opacity: 0.08;
+  mix-blend-mode: multiply;
+}
+
+.prism-bg canvas {
+  width: 100% !important;
+  height: 100% !important;
+
+  filter:
+    saturate(0.7)
+    brightness(0.95)
+    contrast(1.05);
+}
