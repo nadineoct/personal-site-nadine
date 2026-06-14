@@ -10,22 +10,6 @@ export function About() {
       <h2 className="text-4xl md:text-5xl font-bold mb-16">
         About Me
       </h2>
-      {/* Animated Background */}
-      <div className="absolute inset-0 opacity-20 pointer-events-none">
-  <Ferrofluid
-    className="w-full h-full"
-    dpr={1}
-    mixBlendMode="screen"
-    colors={["#7C3AED"]}
-    speed={0.25}
-    scale={2}
-    turbulence={0.8}
-    fluidity={0.15}
-    glow={1.5}
-    shimmer={1}
-    mouseInteraction={false}
-  />
-</div>
 
       <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-24 items-center">
         {/* LEFT CONTENT */}
