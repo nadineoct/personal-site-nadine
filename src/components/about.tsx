@@ -16,7 +16,7 @@ export function About() {
     className="w-full h-full"
     dpr={1}
     mixBlendMode="screen"
-    colors={["#ffffff"]}
+    colors={["#7C3AED"]}
     speed={0.25}
     scale={2}
     turbulence={0.8}
