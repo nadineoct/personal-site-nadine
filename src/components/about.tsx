@@ -25,8 +25,12 @@ export function About() {
             className="polaroid-frame -rotate-3 transition-transform duration-500"
           >
             <div className="tape-graphic" />
-            <div className="w-[300px] h-[300px] bg-gray-100 flex items-center justify-center text-gray-300 font-bold uppercase text-[10px] tracking-widest">
-              Primary Profile Photo
+            <div className="w-[300px] h-[300px] relative overflow-hidden bg-gray-100">
+              <img 
+                src="/images/profile.jpg" 
+                alt="Nadine Arindy O." 
+                className="w-full h-full object-cover"
+              />
             </div>
             <div className="mt-8 text-center text-2xl font-black tracking-tight text-gray-400">
               Nadine Arindy O.

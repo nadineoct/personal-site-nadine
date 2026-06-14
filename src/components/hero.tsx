@@ -28,9 +28,13 @@ export function Hero() {
            <motion.div 
              initial={{ scale: 0.9, opacity: 0 }}
              animate={{ scale: 1, opacity: 1 }}
-             className="media-slot aspect-square rounded-[40px] md:rounded-[80px]"
+             className="media-slot aspect-square rounded-[40px] md:rounded-[80px] overflow-hidden relative"
            >
-             [ SLEEK DEVICE MOCKUP ]
+             <img 
+               src="/images/hero.jpg" 
+               alt="Nadine Arindy Octavia Hero" 
+               className="w-full h-full object-cover"
+             />
            </motion.div>
         </div>
       </div>
