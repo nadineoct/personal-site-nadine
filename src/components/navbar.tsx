@@ -28,12 +28,12 @@ export function Navbar() {
   }, []);
 
   const navItems = [
-    "Home",
-    "About",
-    "Education",
-    "Experience",
-    "Creative",
-    "Contact",
+    { label: "Home", id: "home" },
+    { label: "About", id: "about" },
+    { label: "Education", id: "education" },
+    { label: "Experience", id: "experience" },
+    { label: "Creative", id: "achievements" },
+    { label: "Contact", id: "contact" },
   ];
 
   return (
@@ -48,23 +48,19 @@ export function Navbar() {
         </Link>
 
         <div className="hidden md:flex gap-8">
-          {navItems.map((item) => {
-            const id = item.toLowerCase();
-
-            return (
+          {navItems.map((item) => (
               <Link
-                key={item}
-                href={`#${id}`}
+                key={item.id}
+                href={`#${item.id}`}
                 className={`text-[15px] font-medium transition-colors duration-200 ${
-                  activeSection === id
+                  activeSection === item.id
                     ? "text-black"
                     : "text-gray-400 hover:text-black"
                 }`}
               >
-                {item}
+                {item.label}
               </Link>
-            );
-          })}
+            ))}
         </div>
       </div>
     </motion.nav>

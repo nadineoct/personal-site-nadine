@@ -6,7 +6,7 @@ import Ferrofluid from "./Ferrofluid";
 
 export function About() {
   return (
-    <section id="education" className="py-24 border-t border-border">
+    <section id="about" className="py-24 border-t border-border">
       <h2 className="text-4xl md:text-5xl font-bold mb-16">
         About Me
       </h2>
@@ -20,12 +20,12 @@ export function About() {
           viewport={{ once: true }}
         >
 
-          <p className="text-xl md:text-2xl leading-relaxed text-black font-medium mb-8">
+          <p className="text-lg md:text-xl leading-snug text-black font-medium mb-6">
             {siteConfig.bio}
           </p>
 
-          <div className="rounded-3xl border border-white/10 bg-white/5 backdrop-blur-sm p-8">
-            <p className="text-lg md:text-xl font-bold italic leading-relaxed text-black">
+          <div className="rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm p-6">
+            <p className="text-base md:text-lg font-bold italic leading-snug text-black">
               "Active musician and digital creator with a growing online
               audience (9,800+ Instagram · 600+ YouTube). Passionate about
               technology, sustainability, and building meaningful digital
