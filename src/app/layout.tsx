@@ -4,7 +4,7 @@ import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { Geist } from "next/font/google";
 import { cn } from "@/lib/utils";
-import Prism from "@/components/prism";
+import Prism from "@/components/Prism";
 
 const geist = Geist({
   subsets: ["latin"],
