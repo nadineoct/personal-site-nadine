@@ -27,24 +27,24 @@ export function Experience() {
 
               {/* Date + Current Badge */}
               <div className="mb-3">
-                <span className="text-xs md:text-sm font-bold uppercase tracking-[0.15em] text-zinc-500">
+                <span className="text-xs md:text-sm font-bold uppercase tracking-[0.15em] text-[#444444]">
                   {exp.period}
                 </span>
 
                 {exp.current && (
-                  <span className="ml-3 px-3 py-1 rounded-md bg-zinc-800 text-[10px] font-bold uppercase tracking-wider">
+                  <span className="ml-3 px-3 py-1 rounded-full bg-[#111111] text-white text-[10px] font-bold uppercase tracking-wider">
                     Current
                   </span>
                 )}
               </div>
 
               {/* Role */}
-              <h3 className="text-2xl md:text-4xl font-bold mb-3">
+              <h3 className="text-2xl md:text-4xl font-bold mb-3 text-[#111111]">
                 {exp.role}
               </h3>
 
               {/* Company */}
-              <p className="text-lg text-zinc-400 mb-6">
+              <p className="text-lg text-[#444444] mb-6">
                 {exp.company}
               </p>
 
@@ -53,9 +53,9 @@ export function Experience() {
                 {exp.points.map((point, i) => (
                   <li
                     key={i}
-                    className="flex gap-3 text-zinc-300 leading-relaxed"
+                    className="flex gap-3 text-[#111111] leading-relaxed font-medium"
                   >
-                    <span className="mt-2 h-1.5 w-1.5 rounded-full bg-zinc-500 shrink-0" />
+                    <span className="mt-2 h-1.5 w-1.5 rounded-full bg-[#111111] shrink-0" />
                     <span>{point}</span>
                   </li>
                 ))}
