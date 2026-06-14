@@ -31,7 +31,7 @@ export function Hero() {
              className="media-slot aspect-square rounded-[40px] md:rounded-[80px] overflow-hidden relative"
            >
              <img 
-               src="public/images/hero.jpg" 
+               src="/images/hero.jpg" 
                alt="Nadine Arindy Octavia Hero" 
                className="w-full h-full object-cover"
              />
