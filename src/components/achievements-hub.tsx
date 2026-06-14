@@ -75,62 +75,58 @@ export function AchievementsHub() {
   );
 
   return (
-    <section id="achievements" className="py-32 border-t border-border">
-      <div className="flex flex-col gap-12">
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-8">
-          <h2 className="text-6xl md:text-8xl font-black uppercase">
-            04 / HUB
-          </h2>
+    <section id="achievements" className="py-24 border-t border-border">
+      <h2 className="text-4xl md:text-5xl font-bold mb-16">
+        Achievements Hub
+      </h2>
 
-          <div className="flex gap-2 p-1 bg-gray-100 rounded-lg overflow-x-auto whitespace-nowrap">
-            {[
-              { id: "all", label: "All Achievements" },
-              { id: "comp", label: "Competitions & Awards" },
-              { id: "global", label: "Global & Recognitions" },
-            ].map((tab) => (
-              <button
-                key={tab.id}
-                onClick={() => setActiveTab(tab.id)}
-                className={`px-6 py-2 rounded-md text-sm font-bold transition-all ${
-                  activeTab === tab.id
-                    ? "bg-white shadow-sm text-foreground"
-                    : "text-muted hover:text-foreground"
-                }`}
-              >
-                {tab.label}
-              </button>
-            ))}
-          </div>
-        </div>
+      <div className="flex gap-2 p-1 bg-gray-100 rounded-lg overflow-x-auto whitespace-nowrap mb-8">
+        {[
+          { id: "all", label: "All Achievements" },
+          { id: "comp", label: "Competitions & Awards" },
+          { id: "global", label: "Global & Recognitions" },
+        ].map((tab) => (
+          <button
+            key={tab.id}
+            onClick={() => setActiveTab(tab.id)}
+            className={`px-6 py-2 rounded-md text-sm font-bold transition-all ${
+              activeTab === tab.id
+                ? "bg-white shadow-sm text-foreground"
+                : "text-muted hover:text-foreground"
+            }`}
+          >
+            {tab.label}
+          </button>
+        ))}
+      </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filtered.map((item, i) => (
-            <div
-              key={i}
-              className="apple-card flex flex-col gap-6 overflow-hidden"
-            >
-              <div className="h-48 rounded-2xl overflow-hidden bg-gray-100">
-                <img
-                  src={item.image}
-                  alt={item.title}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-
-              <div>
-                <h4 className="text-xl font-black leading-tight mb-2">
-                  {item.title}
-                </h4>
-
-                {item.desc && (
-                  <p className="text-sm text-muted font-medium">
-                    {item.desc}
-                  </p>
-                )}
-              </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {filtered.map((item, i) => (
+          <div
+            key={i}
+            className="apple-card flex flex-col gap-6 overflow-hidden"
+          >
+            <div className="h-48 rounded-2xl overflow-hidden bg-gray-100">
+              <img
+                src={item.image}
+                alt={item.title}
+                className="w-full h-full object-cover"
+              />
             </div>
-          ))}
-        </div>
+
+            <div>
+              <h4 className="text-xl font-black leading-tight mb-2">
+                {item.title}
+              </h4>
+
+              {item.desc && (
+                <p className="text-sm text-muted font-medium">
+                  {item.desc}
+                </p>
+              )}
+            </div>
+          </div>
+        ))}
       </div>
     </section>
   );

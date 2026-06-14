@@ -6,10 +6,10 @@ import Ferrofluid from "./Ferrofluid";
 
 export function About() {
   return (
-    <section
-      id="about"
-      className="relative overflow-hidden py-32 border-t border-border"
-    >
+    <section id="education" className="py-24 border-t border-border">
+      <h2 className="text-4xl md:text-5xl font-bold mb-16">
+        About Me
+      </h2>
       {/* Animated Background */}
       <div className="absolute inset-0 opacity-20 pointer-events-none">
   <Ferrofluid
