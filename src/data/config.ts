@@ -30,40 +30,41 @@ export const siteConfig = {
     degree: "Fundamentals of Programming with Python • High Distinction",
     current: false,
   },
+],experience: [
+  {
+    period: "MAR 2026 — APR 2026",
+    role: "Backend Developer Intern",
+    company: "Wagify Solutions LLP · Remote",
+    current: false,
+    points: [
+      "Designed database schemas and REST APIs",
+      "Implemented JWT authentication",
+      "Integrated frontend and backend systems"
+    ]
+  },
+  {
+    period: "SEP 2025 — PRESENT",
+    role: "Pipeline Talent Programme",
+    company: "Jatinangor Center",
+    current: true,
+    points: [
+      "Selected for talent development programme",
+      "Participated in mentorship and leadership training",
+      "Prepared for global academic opportunities"
+    ]
+  },
+  {
+    period: "AUG 2024 — SEP 2024",
+    role: "Brand Ambassador & Group Leader",
+    company: "Dealls",
+    current: false,
+    points: [
+      "Led 12 ambassadors",
+      "Promoted national Job Expo",
+      "Increased engagement and visibility"
+    ]
+  }
 ],
-  experience: [
-    {
-      company: "Wagify Solutions LLP",
-      role: "Backend Developer Intern",
-      period: "Mar 2026 - Apr 2026",
-      location: "Remote",
-      points: [
-        "Developed scalable APIs using Node.js and Express.",
-        "Integrated third-party AI services for automated content moderation.",
-        "Optimized database schemas in PostgreSQL for faster read/write operations.",
-      ],
-    },
-    {
-      company: "Pipeline Talent Programme at JC",
-      role: "Participant / Talent",
-      period: "Sep 2025 - Present",
-      location: "Hybrid",
-      points: [
-        "Engaged in intensive software engineering workshops and leadership training.",
-        "Collaborated with cross-functional teams to build prototype solutions for industry problems.",
-      ],
-    },
-    {
-      company: "Dealls",
-      role: "Brand Ambassador & Group Leader",
-      period: "Aug 2024 - Sep 2024",
-      location: "Hybrid",
-      points: [
-        "Led a team of campus ambassadors to increase user acquisition by 20%.",
-        "Coordinated marketing events and networking sessions for students.",
-      ],
-    },
-  ],
   skills: {
     hard: ["Python", "C", "Java", "TypeScript", "Next.js", "PostgreSQL", "Git"],
     language: ["Indonesian (Native)", "English (Professional)", "German (Basic)"],
