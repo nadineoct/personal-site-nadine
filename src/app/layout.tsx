@@ -36,14 +36,14 @@ export default function RootLayout({
         <div className="fixed inset-0 -z-10 pointer-events-none prism-bg">
           <Prism
             animationType="3drotate"
-            timeScale={0.08}
-            height={1}
-            baseWidth={7}
-            scale={6}
-            hueShift={260}
-            colorFrequency={0.25}
-            noise={0.03}
-            glow={0.04}
+            timeScale={0.3}
+            height={4}
+            baseWidth={6}
+            scale={4}
+            hueShift={4.5} 
+            colorFrequency={0.2}
+            noise={0.05}
+            glow={0.3}
           />
         </div>
 

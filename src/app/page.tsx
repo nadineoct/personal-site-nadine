@@ -4,6 +4,7 @@ import { Education } from "@/components/education";
 import { Experience } from "@/components/experience";
 import { Skills } from "@/components/skills";
 import { AchievementsHub } from "@/components/achievements-hub";
+import { ProjectsTab } from "@/components/projects-tab";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <About />
       <Education />
       <Experience />
+      <ProjectsTab />
       <AchievementsHub />
       <Skills />
     </div>

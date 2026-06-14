@@ -19,10 +19,10 @@
     @apply font-sans;
   }
   body {
-    background-color: var(--color-background);
+    background-color: transparent;
     color: var(--color-foreground);
     -webkit-font-smoothing: antialiased;
-    @apply bg-background text-foreground;
+    @apply font-sans text-foreground;
   }
   h1, h2, h3 {
     letter-spacing: -0.04em;
@@ -213,8 +213,8 @@
   --sidebar-ring: oklch(0.556 0 0);
 }
 .prism-bg {
-  opacity: 0.08;
-  mix-blend-mode: multiply;
+  opacity: 0.5;
+  mix-blend-mode: screen;
 }
 
 .prism-bg canvas {
